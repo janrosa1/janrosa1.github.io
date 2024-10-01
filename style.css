@@ -1,48 +1,86 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap);
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+/* Basic reset */
+/* Use Merriweather for headings */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
 
+/* Use a different font for the body (e.g., Arial) */
+body, p {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Layout and spacing */
 body {
-    margin: auto;
-    padding-right: 1em;
-    padding-left: 1em;
-    max-width: 88em;
-    color: black;
-    font-family: IBM Plex Sans, sans-serif;
-    font-size: 150%;
-    line-height: 140%;
+    background: #ffffff;
     color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h1, h2, h3, h4, h5 { font-family: IBM Plex Sans;
-                     font-weight: bold;
-                     border-bottom: 1px dotted black;
-                     color: #7a5ada; }
-h1 {
-        font-size: 140%;
+/* Header styling */
+header {
+    background: #f4f4f4;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-        font-size: 120%;
+header nav {
+    display: flex;
+    justify-content: center;
 }
 
-h3 {
-        font-size: 110%;
+header nav a {
+    color: #333;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-h4 {
-        font-size: 105%;
+header nav a:hover {
+    color: #007acc;
 }
 
-h5 {
-        font-size: 100%;
+/* Hero Section */
+#hero {
+    text-align: center;
+    margin: 20px 0;
 }
 
-h1.title {
-        font-size: 200%;
-        font-weight: bold;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
-        text-align: left;
-        border: none;
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.hero-content p {
+    color: #555;
+}
+
+/* Content Sections */
+section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.research-item {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
