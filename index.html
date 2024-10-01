@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jan Rosa - Research Website</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Rosa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styling for the abstract sections */
+        .abstract {
+            display: none; /* Hide abstracts by default */
+            text-align: justify; /* Justify the text */
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007acc;
+            margin: 10px 0;
+        }
+
+        .paper-title {
+            cursor: pointer; /* Show pointer cursor on hover */
+            color: #007acc;
+        }
+
+        .paper-title:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-    
+
 <body>
     <!-- Header Section -->
     <header>
         <nav>
             <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#cv">CV</a>
-            <a href="#publications">Publications</a>
+            <a href="#publications">Working Papers</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -25,45 +43,59 @@
         <div class="hero-content">
             <img src="images/JanRosa_PP.jpg" alt="Jan Rosa Photo" class="profile-pic">
             <h1>Jan Rosa</h1>
-            <p>Researcher in Applied Economics</p>
         </div>
     </section>
 
     <!-- Main Content Sections -->
     <main>
         <section id="about">
-            <h2>About Me</h2>
-            <p>Include a brief bio here similar to the introductory section on Sam's site. You can talk about your research interests and academic background.</p>
+            <p><strong>I am a PhD candidate at the Vancouver School of Economics, University of British Columbia. 
+                My research interests are in labour economics and macroeconomics. You can find my CV <a href="CV/CV_JR.pdf">here</a> </strong> </p>
+            <p> I am on the 2024-25 job market. </p>    
         </section>
 
-        <section id="research">
-            <h2>Research</h2>
-            <div class="research-item">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the research project.</p>
-            </div>
-            <div class="research-item">
-                <h3>Project Title 2</h3>
-                <p>Another research project description.</p>
-            </div>
-        </section>
-
-        <section id="cv">
-            <h2>Curriculum Vitae</h2>
-            <p>You can add your CV here or link to a downloadable PDF version.</p>
-        </section>
 
         <section id="publications">
-            <h2>Publications</h2>
+            <h2>Working Papers</h2>
             <ul>
-                <li>Publication 1: <a href="#">Title and link</a></li>
-                <li>Publication 2: <a href="#">Title and link</a></li>
+                <li>
+                    <span>
+                        <b>Granular local labor market multipliers: Evidence from multi-location employers' expansions.</b>
+                    </span>
+                    <i>Job Market Paper</i>
+                    <p class="paper-title" onclick="toggleAbstract('abstract1')"> [abstract]</p>
+
+                    <div id="abstract1" class="abstract">
+                        Abstract: This paper investigates the influence of multi-location (national) employers on the policies of smaller (local) firms. 
+                        Using Brazilian employer-employee data, I explore the spillover effects both on the job and worker levels. To distinguish spillover effects from local productivity changes, 
+                        I develop a portable empirical strategy that relies on the national employers' activities in large cities, likely unaffected by labor market dynamics in small or 
+                        medium-sized locations. Furthermore, by disaggregating the wage and employment changes of national firms, this strategy enables the identification of wage and 
+                        employment changes specific to each national employer. Subsequently, I construct a shift-share measure of the labor market exposure to the national employers' labor demand shocks.
+                        Employing an event study design, I examine the long-term effects of substantial positive change in the shift-share measure. 
+                        The findings reveal positive and slow-increasing wage effects on local employers and negative employment spillovers. 
+                        Moreover, I show that both new hirers and incumbent local employers' workers experience the wage increases.
+                    </div>
+                </li>
+                <li>
+                    <span >
+                        <b>Spooky Boundaries at a Distance: Inductive Bias, Dynamic Models, and Behavioral Macro.</b>
+                    </span> 
+                    <i> with Mahdi Ebrahimi Kahou, Jesus Fernandez-Villaverde, Sebastian Gomez-Cardona and Jesse Perla</i>
+                    <p class="paper-title" onclick="toggleAbstract('abstract2')"> [abstract]</p>
+                    <div id="abstract2" class="abstract">
+                        Abstract: In the long run, we are all dead. Nonetheless, when studying the short-run dynamics of economic models, it is crucial to consider boundary conditions that govern long-run, 
+                        forward-looking behavior, such as transversality conditions. We demonstrate that machine learning (ML) can automatically satisfy these conditions due to its inherent inductive 
+                        bias toward finding flat solutions to functional equations. This characteristic enables ML algorithms to solve for transition dynamics, ensuring that long-run boundary conditions 
+                        are approximately met. ML can even select the correct equilibria in cases of steady-state multiplicity. 
+                        Additionally, the inductive bias provides a foundation for modeling forward-looking behavioral agents with self-consistent expectations.
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Feel free to get in touch via email at <a href="mailto:jan.rosa@example.com">jan.rosa@example.com</a>.</p>
+            <p> <a href="mailto:jan.rosa1993@gmail.com">jan.rosa1993@gmail.com</a>.</p>
         </section>
     </main>
 
@@ -71,5 +103,17 @@
     <footer>
         <p>&copy; 2024 Jan Rosa. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript to toggle abstracts -->
+    <script>
+        function toggleAbstract(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
