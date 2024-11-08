@@ -40,10 +40,20 @@ header nav a:hover {
     color: #007acc;
 }
 
-/* Hero Section */
-#hero {
+/* Hero and About Section - Two Column Layout */
+#hero-about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-content {
+    flex: 1;
     text-align: center;
-    margin: 20px 0;
 }
 
 .profile-pic {
@@ -52,13 +62,8 @@ header nav a:hover {
     height: 150px;
 }
 
-.hero-content h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
-
-.hero-content p {
-    color: #555;
+#about {
+    flex: 2;
 }
 
 /* Content Sections */
